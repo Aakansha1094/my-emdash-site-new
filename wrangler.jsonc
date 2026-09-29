@@ -8,6 +8,7 @@
 		{
 			"binding": "DB",
 			"database_name": "aakansha-site",
+			"database_id": "69eba752-7c25-43c8-8462-3563ba09e846",
 		},
 	],
 	"r2_buckets": [
