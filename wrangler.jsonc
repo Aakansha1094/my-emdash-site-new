@@ -19,8 +19,10 @@
 	],
 	// Sandboxed plugins require Worker Loader, available on Workers paid plans. Uncomment to enable:
 	// "worker_loaders": [{ "binding": "LOADER" }],
-	// General maintenance cron trigger
+	// General maintenance cron trigger. Hourly, not every minute: each run boots
+	// the full EmDash runtime and does cleanup work, which blows the Free plan
+	// 10ms CPU limit. Scheduled posts publish up to an hour late as a result.
 	"triggers": {
-		"crons": ["* * * * *"],
+		"crons": ["0 * * * *"],
 	},
 }
